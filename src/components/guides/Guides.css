@@ -1,0 +1,120 @@
+/* Apply Tahoma font to the entire component */
+.guides-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12%;
+  font-family: Tahoma, sans-serif; /* Set Tahoma as the default font */
+  border-radius: 20px; /* Add rounded corners to the main container */
+  background-color: #f8f9fa; /* Optional: Light background for visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.video-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.video-section iframe {
+  width: 1100px;
+  height: 700px;
+  border-radius: 10px;
+}
+
+.custom-separator {
+  height: 1px; /* Adjust thickness */
+  background-color: #000000; /* Line color */
+  margin: 20px 0; /* Spacing around the line */
+  width: 100%; /* Full width */
+}
+
+
+.middle-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px; /* Round the corners of the image */
+}
+
+.text-section {
+  text-align: center;
+  max-width: 700px;
+  margin-top: 30px;
+  border-radius: 20px; /* Round the corners of the text section */
+  background-color: #ffffff; /* Optional: Background color for the text section */
+  padding: 20px; /* Optional: Add padding to the text section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.text-section h2 {
+  font-size: 3em; /* Increased font size */
+  font-weight: bold; /* Make the title bold */
+  margin-bottom: 15px;
+}
+
+.text-section p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.additional-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.image-block {
+  text-align: center;
+  max-width: 700px;
+  border-radius: 20px; /* Round the corners of each image block */
+  background-color: #ffffff; /* Optional: Background color for the image block */
+  padding: 20px; /* Optional: Add padding to the image block */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 20px; /* Round the corners of the images */
+}
+
+.image-block h3 {
+  font-size: 2.5em; /* Increased font size */
+  font-weight: bold; /* Make the title bold */
+  margin-bottom: 15px;
+}
+
+.image-block p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+ul {
+  text-align: left;
+  padding-left: 30px;
+  font-size: 1.2em;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.container {
+  display: flex;
+  width: 110%;
+  background-color: #333;
+  justify-content: center;
+  margin-left: -30px;
+  margin-bottom: -100px;
+  margin-top: 20px;
+}
+
+

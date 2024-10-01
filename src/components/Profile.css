@@ -1,0 +1,136 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.profile-name {
+  color: #f0ce41;
+  text-shadow: 0 0 10px #f0ce41;
+  transition: text-shadow 0.3s ease-in-out;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.profile-name:hover {
+  text-shadow: 0 0 20px #f0ce41, 0 0 30px #f0ce41, 0 0 40px #f0ce41;
+}
+
+.profile-email {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.0rem;
+  margin-top: 1px;
+}
+
+.favorite-games-title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+}
+
+.favorite-games {
+  margin-top: 20px;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.game-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.game-image {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.icon-selected {
+  color: red;
+}
+
+.icon-unselected {
+  color: gray;
+}
+
+.bio-title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.textarea-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.stylish-textarea {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  resize: vertical;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.stylish-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+.profile-picture {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: #a7004c;
+  font-size: 16px;
+  border: 2px solid #f0ce41;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #f0ce41;
+}
