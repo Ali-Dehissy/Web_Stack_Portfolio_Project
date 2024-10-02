@@ -218,7 +218,6 @@ app.put("/profile", isAuthenticated, upload.single("profilePicture"), async (req
     }
 });
 
-// Get user profile information
 app.get("/profile", isAuthenticated, async (req, res) => {
     try {
         const user = await User.findById(req.session.user.id);
@@ -231,7 +230,6 @@ app.get("/profile", isAuthenticated, async (req, res) => {
     }
 });
 
-// User logout
 app.post("/logout", (req, res) => {
     req.session.destroy((err) => {
         if (err) return res.status(500).json({ msg: "Failed to log out" });
