@@ -230,6 +230,7 @@ app.get("/profile", isAuthenticated, async (req, res) => {
     }
 });
 
+
 app.post("/logout", (req, res) => {
     req.session.destroy((err) => {
         if (err) return res.status(500).json({ msg: "Failed to log out" });
