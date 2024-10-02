@@ -43,16 +43,16 @@
     width: 100%;
     padding: 10px;
     background-color: transparent; 
-    color: #fff;
+    color: #000000;
     font-size: 16px;
-    border: 2px solid #f0ce41;
+    border: 2px solid #e10044;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
   }
   
   .login-button:hover {
-    background-color: #f0ce41;
+    background-color: #e10044;
   }
   
   .error {
@@ -75,7 +75,7 @@
   }
   
   .signup-redirect a {
-    color: #f0ce41;
+    color: #ffffff;
     text-decoration: none;
   }
   

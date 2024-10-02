@@ -67,7 +67,7 @@ video {
 
 .navbar-links {   
   position: absolute;
-  left: 15%;
+  left: 18%;
   display: flex;
   align-items: center;
   }
@@ -93,6 +93,7 @@ video {
   display: flex;
   align-items: center;
   gap: 10px; 
+  padding-top: 15px;
 }
 
 .auth-button {
@@ -102,6 +103,7 @@ video {
 
 .auth-button .username {
   margin-right: 10px; 
+  padding-top: 15px;
 }
 
 .auth-button .btn {
@@ -123,13 +125,15 @@ video {
 }
 
 .logo {
-  height: 100px;
-  margin-left: 10%;
-  display: block;
-  position: relative;
-  transition: filter 0.3s ease;
-}
-
+    width: 200px;
+    height: auto;
+    margin-left: 10%;
+    display: block;
+    position: relative;
+    transition: filter 0.3s ease;
+    object-fit: contain;
+  }
+  
 .dropdown {
   position: relative;
 }

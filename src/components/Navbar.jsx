@@ -52,9 +52,9 @@ const Navbar = () => {
           <p>Forum</p>
         </Link>
         
-        <div className='nav-item'>
-          <p>Gift Codes</p>
-        </div>
+        <Link to="/purchase" className='nav-item'>
+          <p>Purchase</p>
+        </Link>
         
         <Link to="/contact" className='nav-item'>
           <p>Contact</p>

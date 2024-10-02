@@ -10,7 +10,7 @@ const allGames = [
   { name: 'Rocket League', image: '/images/banners/rocketleague.png' },
   { name: 'Rainbow Six Siege', image: '/images/banners/rainbowsixsiege.png' },
   { name: 'Counter Strike 2', image: '/images/banners/counterstrike2.png' },
-  { name: 'Warzone', image: '/images/banners//callofdutywarzone.png' },
+  { name: 'Warzone', image: '/images/banners/callofdutywarzone.png' },
   { name: 'Fortnite', image: '/images/banners/fortnite.png' },
   { name: 'Overwatch 2', image: '/images/banners/overwatch2.png' }
 ];
@@ -30,11 +30,16 @@ const Profile = () => {
     favoriteGames: []
   });
 
+  // Fetch user data on component mount
   useEffect(() => {
     axios.get('http://localhost:3001/profile', { withCredentials: true })
       .then((response) => {
         setUserData(response.data);
-        setFormData({ bio: response.data.bio, profilePicture: null, favoriteGames: response.data.favoriteGames || [] });
+        setFormData({ 
+          bio: response.data.bio, 
+          profilePicture: null, 
+          favoriteGames: response.data.favoriteGames || [] 
+        });
       })
       .catch((error) => {
         console.error('Error fetching user data:', error);
@@ -58,9 +63,11 @@ const Profile = () => {
     e.preventDefault();
     const dataToSend = new FormData();
     dataToSend.append('bio', formData.bio);
+    
     if (formData.profilePicture) {
       dataToSend.append('profilePicture', formData.profilePicture);
     }
+    
     dataToSend.append('favoriteGames', JSON.stringify(formData.favoriteGames));
 
     try {
@@ -70,7 +77,7 @@ const Profile = () => {
         },
         withCredentials: true
       });
-      setUserData(response.data);
+      setUserData(response.data); // Update UI with new data
     } catch (error) {
       console.error('Error updating profile:', error);
     }
@@ -81,10 +88,17 @@ const Profile = () => {
       <Navbar />
       <div className='profile-container'>
         <div className='profile-info'>
-          <img src={`http://localhost:3001/uploads/${userData.profilePicture}`} alt="Profile" className='profile-picture' />
+          {/* Profile picture with proper image URL */}
+          <img
+            src={userData.profilePicture ? `http://localhost:3001/uploads/${userData.profilePicture}` : '/default-avatar.png'}
+            alt="Profile"
+            className='profile-picture'
+          />
           <p className='profile-name'>{userData.name}</p>
           <p className='profile-email'>{userData.email}</p>
           <p>{userData.bio}</p>
+
+          {/* Favorite Games */}
           <div className='favorite-games'>
             <h3 className='favorite-games-title'>Favorite Games</h3>
             <div className='games-container'>
@@ -103,19 +117,23 @@ const Profile = () => {
             </div>
           </div>
         </div>
+
+        {/* Update Profile Form */}
         <form onSubmit={handleSubmit} encType='multipart/form-data'>
           <div className='form-group'>
             <label className='bio-title'>Bio</label>
             <div className="textarea-container">
-  <textarea
-    name="bio"
-    className="stylish-textarea"
-    value={formData.bio}
-    onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
-    rows="4"
-  />
-</div>
+              <textarea
+                name="bio"
+                className="stylish-textarea"
+                value={formData.bio}
+                onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
+                rows="4"
+              />
+            </div>
           </div>
+
+          {/* Profile picture input */}
           <div className='form-group'>
             <label className='profile-picture'>Update Profile Picture</label>
             <input

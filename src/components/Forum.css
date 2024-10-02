@@ -1,0 +1,34 @@
+.forum-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Vertically center */
+    background-color: #f4f4f9; /* Soft background color */
+    padding: 20px;
+  }
+  
+  .forum-title {
+    font-size: 2rem;
+    font-family: 'Gothic A1', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .forum-iframe {
+    width: 80%;
+    max-width: 1000px;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add some responsive styles */
+  @media (max-width: 768px) {
+    .forum-iframe {
+      width: 95%; /* Make the iframe width more flexible on smaller screens */
+    }
+  }
+  

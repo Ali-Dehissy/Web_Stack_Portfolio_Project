@@ -5,6 +5,7 @@ import GamesNews from './GamesNews';
 import Homevideo from './Homevideo';
 import UpcomingTournaments from './UpcomingTournaments';
 
+
 const Home = () => {
   return (
     <div>

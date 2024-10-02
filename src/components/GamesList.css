@@ -1,0 +1,51 @@
+.games-list {
+    text-align: center; /* Center the text */
+    padding-top: 10%; /* Add some padding */
+}
+
+.games-list h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items horizontally */
+}
+
+li {
+    margin: 15px; /* Space between items */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    flex: 0 1 calc(33.33% - 30px); /* Adjust size: three items per row */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+li:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+img {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-radius: 10px; /* Add rounded corners to images */
+}
+
+h3, p {
+    margin-top: 10px; /* Space above game name and price text */
+    text-align: center; /* Center text under the image */
+}
+
+h3 {
+    font-size: 1.2em; /* Adjust font size for titles */
+}
+
+p {
+    font-size: 1em;
+}
+    

@@ -19,10 +19,11 @@ import Contact from "./components/Contact";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Profile from './components/Profile';
-import Forum from './components/Forum';
 import CreateTournamentForm from './components/CreateTournamentForm';
 import LolUpcomingTournaments from './components/LolUpcomingTournaments';
 import WorldWideTournaments from './components/WorldWideTournaments';
+import GamesList from './components/GamesList';
+import Forum from './components/Forum';
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path="/tournaments" element={<CreateTournamentForm />} /> 
           <Route path="/league-of-legends" element={<LolUpcomingTournaments />} /> 
           <Route path="/worldwide-tournaments" element={<WorldWideTournaments />} /> 
+          <Route path="/purchase" element={<GamesList />} /> 
         </Routes>
       </div>
     </Router>
